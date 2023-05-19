@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  /* display: contents; */
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+
+<!-- <h2>Saúde da Mulher - Meta 2</h2> -->
+Saúde da Mulher - Meta 2
+<!-- <p>Click on the buttons inside the tabbed menu:</p> -->
+
+<div class="tab">
+  <button class="tablinks" onclick="abreAba(event, 'Dashboard')">Dashboard</button>
+  <button class="tablinks" onclick="abreAba(event, 'Modelos')">Modelos</button>
+  <button class="tablinks" onclick="abreAba(event, 'Aplicativo')">Aplicativo</button>
+</div>
+
+<div id="Dashboard" class="tabcontent">
+  <iframe src="https://app.powerbi.com/reportEmbed?reportId=bda42baf-c039-4d16-be6e-7d700338a13a&autoAuth=true&ctid=4dd4170c-d581-4ac5-bb61-6582a6571b88&navContentPaneEnabled=false" title="Dashboard" style="height: 80vh; width:100%"></iframe>
+</div>
+
+<div id="Modelos" class="tabcontent">
+  <iframe src="https://website-saude-projeto.netlify.app/" title="Modelos" style="height: 80vh; width:100%"></iframe>
+</div>
+
+<div id="Aplicativo" class="tabcontent">
+  <iframe src="http://retina.inf.ufsc.br:8000/app/sinasc-v4" title="Aplicativo" style="height: 80vh; width:100%"></iframe>
+</div>
+
+<script>
+function abreAba(evt, abaNome) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(abaNome).style.display = "block";
+  // document.getElementById(abaNome).style.display = "table";
+  // document.getElementById(abaNome).style.height = "500px";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 

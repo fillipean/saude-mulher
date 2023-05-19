@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Projeto Saúde da Mulher",
+    "section": "",
+    "text": "Este site visa apresentar os produtos do projeto “Saúde da Mulher”, que é desenvolvido em parceria com o Ministério da Saúde e a OPAS, pela gestão da IFF/FIOCRUZ. Esta proposta congrega dois grandes produtos: desenvolvimento do modelo preditivo em riscos de morbibortalidade materna e elaboração de uma proposta metodológica de interoperabilidade entre os dados da APS e AE (ambulatorial e hospitalar) para monitoramento do cuidado perinatal.\nPara mais informações sobre o projeto, visite https://servicos.fiotec.org.br/PortalAcessoInformacao/DetalheProjeto.aspx?k=1484."
+  },
+  {
+    "objectID": "modelo_py.html",
+    "href": "modelo_py.html",
+    "title": "Modelos Preditivos (Py)",
+    "section": "",
+    "text": "Este modelo está baseado em Python.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n#import streamlit as st\n#import pandas as pd\n#import scikitplot.plotters as skplt\n\n#from sklearn.neural_network import MLPClassifier\n#from sklearn.ensemble import RandomForestClassifier\n#from sklearn.metrics import auc\n#from sklearn.model_selection import StratifiedKFold\n#from sklearn.model_selection import train_test_split\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+  },
+  {
+    "objectID": "modelo_r.html",
+    "href": "modelo_r.html",
+    "title": "Modelos Preditivos (R)",
+    "section": "",
+    "text": "Este modelo está baseado em R.\n\nx&lt;-seq(0.2,2,0.01)\nf &lt;- function(x) (log(x))^2-x*exp(-x^3)\nplot(x, f(x))"
+  },
+  {
+    "objectID": "tutoriais.html",
+    "href": "tutoriais.html",
+    "title": "Tutoriais",
+    "section": "",
+    "text": "Estes são os manuais desenvolvidos."
+  }
+]
